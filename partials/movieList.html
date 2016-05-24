@@ -1,0 +1,11 @@
+
+    <center>
+        <div ><span class="title">My Movies</span><input type="button" ng-click="goToAddMovie();" value="Add Movie"  class="btn btn-primary button inline"></div>
+    </center>
+
+    <article>
+        <section class="movie-wrapper" ng-repeat="movie in movies | orderBy : '-ReleaseYear'">
+            <movie_Summary title="{{movie.Title}}" rating="{{movie.Rating}}" year="{{movie.ReleaseYear}}" description="{{movie.Description}}" details="goToMovieDetail(movie)"></movieSummary>                            
+        </section>
+    </article>
+

@@ -1,0 +1,20 @@
+<article class="panel panel-default">
+    <header class="panel-heading">
+        <span class="title">{{movie.Title}}</span>
+        <div style="float:right"><span style="margin-right:10px;"> Rating </span><div star-rating rating-value="movie.Rating" class="rating"></div></div>
+    </header>
+    <p class="panel-body">
+        {{movie.Description}}
+    </p>
+    <div class="panel-body">
+        Directed By : {{movie.Director}}</br>
+        Release Year : {{movie.ReleaseYear}}</br>
+        Language : {{movie.Language}}
+    </div>
+    <div class="panel-body">
+        <h4>Characters</h4>
+        <ul class="list-group">
+            <li class="list-group-item" ng-repeat="c in movie.characterList">{{c.Character}} ({{c.Actor}})</li>
+        </ul>
+    </div>
+</article>
